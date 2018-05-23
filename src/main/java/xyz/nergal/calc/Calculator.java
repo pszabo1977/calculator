@@ -20,13 +20,13 @@ public class Calculator {
         if (calculation.startsWith("-")) {
             calculation = "0" + calculation;
         }
-        List<String> tokens = MathExpressionParser.parseExpression(calculation);
+        List<String> tokens = MathExpressionParser.parse(calculation);
         System.out.println("tokens: " + tokens);
 
-        String rpnString = ReversePolishNotationParser.createReversePolishNotation(tokens);
-        System.out.println("polish notation string: >" + rpnString + "<");
+        String rpnString = ReversePolishNotationParser.parse(tokens);
+        System.out.println("reverse polish notation string: >" + rpnString + "<");
 
-        result = ReversePolishNotationProcessor.processRPNP(rpnString);
+        result = ReversePolishNotationProcessor.process(rpnString);
         System.out.println("calculated result: >" + result + "<");
 
         return result;

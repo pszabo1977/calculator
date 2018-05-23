@@ -14,7 +14,7 @@ public class ReversePolishNotationParser {
         operatorMap.put("*", 1);
     }
 
-    public static String createReversePolishNotation(List<String> tokens) {
+    public static String parse(List<String> tokens) {
 
         StringBuilder sb = new StringBuilder();
         Stack<String> s = new Stack<>();

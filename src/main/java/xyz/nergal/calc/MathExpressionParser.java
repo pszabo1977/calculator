@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MathExpressionParser {
 
-    public static List<String> parseExpression(String mathExpression) {
+    public static List<String> parse(String mathExpression) {
         List<String> retval = new ArrayList<>();
         String num = "";
         for (int i = 0; i < mathExpression.length(); i++) {
